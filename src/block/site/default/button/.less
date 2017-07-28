@@ -1,0 +1,104 @@
+.btn__{
+	&item{
+		display: inline-block;
+		outline: none;
+		background: none;
+		text-decoration: none;
+		transition: @trs-btn;
+		//
+		border-width: 2px;
+		border-style: solid;
+		border-color: @btn-border-color;
+		background-color: fadeout(@btn-bg, 100%); 
+		position: relative;
+		color: @btn-color;
+		border-radius: @btn-border-radius;
+		
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: @b-fs - 4px;
+		@media @media-size-xs {
+			padding: 8px 20px;
+		}
+		@media @media-notsmart {
+			padding: 8px 35px;
+		}
+		&:hover{
+			color: @btn-color-hover;
+			background-color: @btn-bg-hover; 
+		}
+		&.is--block{
+			width: 100%;
+		}
+		&.is--sm{
+		    font-size: @b-fs - 5; //13px;
+		    line-height: @b-lh - 7;//17px;
+			@media @media-size-xs {
+				padding: 8px 25px 6px;
+			}
+			@media @media-screen {
+				padding: 6px 25px 4px;
+			}
+		}
+		/*&.is--blue{
+			background-color: @blue;
+			color: @white;
+			&:hover{
+				background-color: @yellow;
+				border-color: @yellow;
+			}
+		}
+		&.is--yellow{
+			background-color: fadeout(@white, 100%);
+			color: @b-color;
+			border-color: @yellow;
+			&:hover{
+				background-color: @yellow;
+				border-color: @yellow;
+			}
+		}*/		
+	}
+	&link{
+		display: inline-block;
+		outline: none;
+		background: none;
+		text-decoration: none;
+		border: 0;
+		transition: @trs-btn;
+		&.is--navbar{
+			border-bottom: 1px solid @b-color;
+	
+			font-size: @b-fs - 0;//14px; 
+			line-height: @b-lh - 8; //12px;
+			@media @media-screen-lg{				
+				font-size: @b-fs - 4;//14px; 
+				line-height: @b-lh - 12; //12px;		
+			}
+			@media @media-size-lg{
+				font-size: @b-fs - 6;//14px; 
+				line-height: @b-lh - 14; //12px;
+			}
+			//position: relative;
+			//letter-spacing: 1.5px;
+			&, &:focus{color: @b-color;}
+			&:hover{
+				color: @b-color-a;
+				border-color: fadeout(@b-color-a, 100%);
+			}
+		}
+	}
+	&icon{
+		display: block;
+		svg{display: block;}
+		&.is--navbar{
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translate(0, -50%);
+			width: 20px;
+			height: 20px;
+			color: @b-color-a;
+		}
+	}
+}

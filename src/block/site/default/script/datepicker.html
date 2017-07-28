@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="{{url-path-css}}/jquery-ui.css">
+<script src="{{url-path-js}}/jquery-ui.js"></script>
+<script src="{{url-path-js}}/jquery-ui.datepicker-ru.js"></script>
+<script>
+	$( function() {
+		$("#datepicker-ru").datepicker(
+			$.datepicker.regional[ "ru" ]
+		);
+		$("#datepicker-en").datepicker(
+			$.datepicker.regional[ "en" ]
+		);
+	});
+</script>

@@ -1,0 +1,33 @@
+<div class="modal fade {{modals_prefix}}modal" id="{{modals_id}}" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog {{modals_prefix}}dialog">
+		<div class="modal-body {{modals_prefix}}body" >
+			<button type="button" class="btn-site btn-close modal-close" data-dismiss="modal" aria-hidden="true">
+				[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="modal-close"]]
+			</button>
+			<div class="modal-content {{modals_prefix}}content">
+				[[azbntple 
+					tpl="/src/block/site/default/page-header/heading.html" 
+					header_prefix="page-header__" 
+					header_mod="is--modals"
+					header_level="h4" 
+					header="Calendar of employment"
+				]]	
+				<div class="{{modals_prefix}}datepicker-block">
+					<div id="datepicker-en" class="{{modals_prefix}}datepicker"></div>
+					<ul class="{{modals_prefix}}datepicker-status">
+						<li class="{{modals_prefix}}datepicker-status-item  is--lock">- date employed</li>
+						<li class="{{modals_prefix}}datepicker-status-item  is--am"> - busy morning</li>
+						<li class="{{modals_prefix}}datepicker-status-item  is--pm"> - busy afternoon</li>
+						<li class="{{modals_prefix}}datepicker-status-item  is--reserv"> - booked</li>
+					</ul>
+				</div>
+				<div class="{{modals_prefix}}note">
+					<p>Here you can find a schedule of my employment. If your interest date free to contact me in any convenient manner.</p>
+				</div>
+				<div class="{{modals_prefix}}btn-block">
+					<a href="#" class="btn__item  is--sm">go to contacts</a>
+				</div>
+			</div> 
+		</div>
+	</div>
+</div>

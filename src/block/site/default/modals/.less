@@ -1,0 +1,181 @@
+ //
+// Modals
+// --------------------------------------------------
+
+// .modal-open      - body class for killing the scroll
+// .modal           - container to scroll within
+// .modal-dialog    - positioning shell for the actual modal
+// .modal-content   - actual modal w/ bg and corners and shit
+
+// Kill the scroll on the body
+.modal-open {
+	//overflow: hidden; 
+}
+.modal {
+	display: none;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: @zindex-modal;
+	-webkit-overflow-scrolling: touch;
+	outline: 0;
+	@media @media-size-xs{
+		&.fade .modal-dialog {left: -100%;}
+		&.in .modal-dialog {left: 0;}
+	}
+	@media @media-notsmart{
+		&.fade .modal-dialog {top: 0;}
+		&.in .modal-dialog {top: 5%;}
+	}
+	@media @media-size-mdl{
+		&.fade .modal-dialog {top: 0;}
+		&.in .modal-dialog {top: 0%;}
+	}
+}
+.modal-open .modal {
+	overflow-x: hidden;
+	overflow-y: auto;
+	@media @media-notsmart{overflow-y: hidden;}
+	
+}
+.modal-backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: @zindex-modal-background;
+	background-color: @modal-backdrop-bg;
+	// Fade for backdrop
+	&.fade { .opacity(0); }
+	&.in { .opacity(0.90); }
+
+}
+.modal-dialog {
+	transition: all 0.5s;
+	position: relative;
+	@media @media-size-xs 	{width: auto;	margin: 0px;}  
+	@media @media-size-sm 	{width: 530px;	margin: 10px auto;}  
+	@media @media-screen 	{width: 530px;	margin: 0px auto;} 
+	 
+}
+.modal-body {
+	position: relative;
+	background: @white;
+	//color: @black;	
+	@media @media-device{padding: 35px 30px;}	
+	@media @media-screen{padding: 1.8vw 3.5vw}
+}
+.modal-content{}
+// Title text within header
+.modal-title {}
+.modal-close{
+    position: absolute;
+    z-index: 5; 
+    //border: 2px solid @blue;    
+	top: 10px;
+	right: 10px;
+	@media @media-device{
+		width: 42px;
+		height: 42px;
+		padding: 15px;
+	}
+	@media @media-screen{
+		width: 32px;
+		height: 32px;
+		padding: 10px;
+	}	
+	svg{display: block;}
+	&:hover{
+		background-color: @b-color-a;
+		color: @white;
+	}
+}
+.modal-note{
+	margin-bottom: 20px;
+}
+// Measure scrollbar width for padding body during modal show/hide
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+//custom styles
+.modal-base{
+}
+.modal-base__{
+	/*&modal{
+		display: block;
+		opacity: 1;
+		background: @black
+	}
+	&dialog {
+		background: url('/img/maket/index1.jpg') no-repeat center -105px;	
+		height: 100%;
+		overflow: auto;
+	}
+	&body {opacity: 0.7;}*/
+	&datepicker-block{
+		max-width: 220px;
+		margin: 0 auto;
+		@media @media-device {margin-bottom: 35px;}
+		@media @media-screen {margin-bottom: 2.5vw;}
+	}
+	&datepicker{
+		margin-bottom: 10px;
+	}
+	&datepicker-status{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		font-size: @b-fs - 4;
+		line-height: @b-lh - 6;
+	}
+	&datepicker-status-item{
+		position: relative;
+		padding-left: 15px;
+		&::before{
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			width: 10px;
+			height: 10px;
+			border-width: 1px;
+			border-style: solid; 
+		}
+		&.is--lock::before{
+			background-color: @b-color-a;
+			border-color: @b-color-a;
+		}	
+		&.is--am::before{
+			background: linear-gradient(135deg, @orange 0%,@orange 50%,@white 50%,@white 100%);
+			border-color: @b-color-a;
+		}
+		&.is--pm::before{
+			background: linear-gradient(135deg, @white 0%,@white 50%,@orange 50%,@orange 100%);
+			border-color: @b-color-a;
+		}	
+		&.is--reserv::before{
+			background: @b-color;
+			border-color: @b-color;
+		}	
+	}
+	&note{
+		text-align: center;
+		font-size: @b-fs - 4;
+		line-height: @b-lh - 8;
+		@media @media-device {margin-bottom: 15px;}
+		@media @media-screen {margin-bottom: 2.15vw}
+	}
+	&btn-block{
+		text-align: center;
+	}
+}

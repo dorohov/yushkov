@@ -1,0 +1,33 @@
+<div class="modal fade {{modals_prefix}}modal" id="{{modals_id}}" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog {{modals_prefix}}dialog">
+		<div class="modal-body {{modals_prefix}}body" >
+			<button type="button" class="btn-site btn-close modal-close" data-dismiss="modal" aria-hidden="true">
+				[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="modal-close"]]
+			</button>
+			<div class="modal-content {{modals_prefix}}content">
+				[[azbntple 
+					tpl="/src/block/site/default/page-header/heading.html" 
+					header_prefix="page-header__" 
+					header_mod="is--modals"
+					header_level="h4" 
+					header="Календарь занятости"
+				]]	
+				<div class="{{modals_prefix}}datepicker-block">
+					<div id="datepicker-ru" class="{{modals_prefix}}datepicker"></div>
+					<ul class="{{modals_prefix}}datepicker-status">
+						<li class="{{modals_prefix}}datepicker-status-item  is--lock">- дата занята</li>
+						<li class="{{modals_prefix}}datepicker-status-item  is--am"> - занята первая половина дня</li>
+						<li class="{{modals_prefix}}datepicker-status-item  is--pm"> - занята вторая половина дня</li>
+						<li class="{{modals_prefix}}datepicker-status-item  is--reserv"> - дата ожидает подтверждения</li>
+					</ul>
+				</div>
+				<div class="{{modals_prefix}}note">
+					<p>Здесь вы можете ознакомиться с графиком моей занятости. Если интересующая Вас дата свободна, свяжитесь со мной любым удобным способом.</p>
+				</div>
+				<div class="{{modals_prefix}}btn-block">
+					<a href="#" class="btn__item  is--sm">Перейти к контактам</a>
+				</div>
+			</div> 
+		</div>
+	</div>
+</div>

@@ -1,0 +1,111 @@
+<nav class="navbar {{class}}">
+	<div class="container {{navbar_prefix}}container">
+		<div class="row {{navbar_prefix}}row">
+			<div class="cols {{navbar_prefix}}cols  is--header"> 				
+				<div class="{{navbar_prefix}}header">
+					<div class="row {{navbar_prefix}}row-header ">
+						<div class="cols {{navbar_prefix}}cols-header  is--hamburger">
+							<div class="{{navbar_prefix}}hamburger">
+								<button class="{{navbar_prefix}}hamburger-btn hamburger__item" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false" data-toggle-nav=".navbar-site" data-body="html" data-collapse-nav=".navbar__collapse">
+									<span class="hamburger__line  is--left"></span>
+									<span class="hamburger__line  is--center"></span>
+									<span class="hamburger__line  is--right"></span>
+								</button>
+							</div>
+						</div>
+						<div class="cols {{navbar_prefix}}cols-header  is--brand">
+							<!-- <a class="{{navbar_prefix}}brand" href="/">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="logotip" ]]
+							</a> -->
+							<a class="{{navbar_prefix}}brand" href="/"><img src="{{url-path-img}}/default/logotip1.png" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="cols {{navbar_prefix}}cols  is--collapse">
+				<div class="{{navbar_prefix}}collapse" >
+					<div class="{{navbar_prefix}}collapse-inner">
+						<div class="row {{navbar_prefix}}collapse-row">
+							<div class="cols {{navbar_prefix}}collapse-cols  is--nav">
+								<ul class="{{navbar_prefix}}nav">
+									[[azbntple 
+										tpl="/src/block/site/default/navbar/item.html" 
+										navbar_prefix="navbar__" 
+										navbar_name="Портфолио"
+										navbar_link="##"
+										navbar_mode="  " 
+									]]	
+									[[azbntple 
+										tpl="/src/block/site/default/navbar/item-collapse-2.html" 
+										navbar_prefix="navbar__" 
+										navbar_name="Услуги и цены"
+										navbar_link="##"
+										navbar_mode="  " 
+										navbar_collapse_1_name="Услуги фотографа"
+										navbar_collapse_1_link="##"
+										navbar_collapse_2_name="Автомобиль"
+										navbar_collapse_2_link="##"
+									]]	
+									[[azbntple 
+										tpl="/src/block/site/default/navbar/item.html" 
+										navbar_prefix="navbar__" 
+										navbar_name="Отзывы"
+										navbar_link="##"
+										navbar_mode="  " 
+									]]	
+									[[azbntple 
+										tpl="/src/block/site/default/navbar/item.html" 
+										navbar_prefix="navbar__" 
+										navbar_name="Блог"
+										navbar_link="##"
+										navbar_mode="  " 
+									]]
+									[[azbntple 
+										tpl="/src/block/site/default/navbar/item-collapse-3.html" 
+										navbar_prefix="navbar__" 
+										navbar_name="Контакты"
+										navbar_link="##"
+										navbar_mode="  " 
+										navbar_collapse_1_name="О фотографе"
+										navbar_collapse_1_link="##"
+										navbar_collapse_2_name="Контакты"
+										navbar_collapse_2_link="##"
+										navbar_collapse_3_name="Партнеры"
+										navbar_collapse_3_link="##"
+									]]  
+								</ul>
+							</div>
+							<div class="cols {{navbar_prefix}}collapse-cols  is--calendar" >
+								<div class="{{navbar_prefix}}btn-block">
+									<button type="button" class="btn__link  is--navbar" data-toggle="modal" data-target="#modal-calendar">
+										<span class="btn__icon   is--navbar">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="calendar" ]]</span>
+										Календарь занятости
+									</button>
+								</div>
+							</div>
+							<div class="cols {{navbar_prefix}}collapse-cols  is--contacts" >
+								<div class="{{navbar_prefix}}tel-block">
+									<a href="tel:+79787870500" class="{{navbar_prefix}}tel">
+										<span class="{{navbar_prefix}}tel-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="tel" ]]</span>
+										+7 97 87 87 0 500
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="cols {{navbar_prefix}}cols  is--lang-bar">
+				<ul class="{{navbar_prefix}}lang-bar">
+					<li class="{{navbar_prefix}}lang-bar-item  is--active">
+						<a class="{{navbar_prefix}}lang-bar-link" href="/">Rus</a>
+					</li>
+					<li class="{{navbar_prefix}}lang-bar-item">/</li>
+					<li class="{{navbar_prefix}}lang-bar-item">
+						<a class="{{navbar_prefix}}lang-bar-link" href="/index-en.html">Eng</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
